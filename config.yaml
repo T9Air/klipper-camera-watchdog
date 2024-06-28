@@ -1,4 +1,6 @@
 functions:
   check_image:
-    path: /home/avraham/3d_print_error_detector/image-compare.py
+    path: /home/usr/klipper-camera-watchdog/compare_images.py
     function: choose_images
+
+# Replace usr with your user
