@@ -2,13 +2,9 @@ import cv2
 import os
 import sys
 
-# Get layer height
-
-layer_height = sys.argv[0]
-
 # Image detection function
 
-def detect_movement_background_subtraction(image1, image2):
+def detect_movement_background_subtraction(image1, image2, threshold):
     # Create background subtractor object
     bg_subtractor = cv2.createBackgroundSubtractorMOG2()
     
@@ -27,7 +23,7 @@ def detect_movement_background_subtraction(image1, image2):
     changed_pixels = cv2.countNonZero(fg_mask)
     
     # Check if movement is detected
-    if (changed_pixels / total_pixels) > .000000000001:    
+    if (changed_pixels / total_pixels) > threshold:    
         return "Movement detected"
     else:
         return "No movement detected"
@@ -37,7 +33,12 @@ def choose_images():
     image1 = cv2.imread('image1_path.jpg')
     image2 = cv2.imread('image2_path')
 
-    # Send results back to macro
+    # Get threshold value
 
-    result = detect_movement_background_subtraction(image1, image2)
+    threshold = sys.argv[0]
+
+    
+    # Send results back to macro
+    
+    result = detect_movement_background_subtraction(image1, image2, threshold)
     return result
