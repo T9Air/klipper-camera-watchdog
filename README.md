@@ -1,2 +1,2 @@
 # klipper-camera-watchdog
-Spaghetti detection and messed up layer detection using camera with timelapse.
+Spaghetti detection and messed up layer detection using a camera with timelapse.
