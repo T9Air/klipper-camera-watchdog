@@ -30,15 +30,16 @@ def detect_movement_background_subtraction(image1, image2, threshold):
 
 # REPLACE IMAGE PATHS WITH YOUR IMAGES
 def choose_images():
-    image1 = cv2.imread('image1_path.jpg')
-    image2 = cv2.imread('image2_path')
+    # If only 1 image, do not check
+    if len(os.listdir(directoryPath)) > 1:
+        image1 = cv2.imread('image1_path.jpg')
+        image2 = cv2.imread('image2_path')
 
-    # Get threshold value
+        # Get threshold value
 
-    threshold = sys.argv[0]
+        threshold = sys.argv[0]
 
+        # Send results back to macro
     
-    # Send results back to macro
-    
-    result = detect_movement_background_subtraction(image1, image2, threshold)
-    return result
+        result = detect_movement_background_subtraction(image1, image2, threshold)
+        return result
