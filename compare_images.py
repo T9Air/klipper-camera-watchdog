@@ -53,17 +53,11 @@ def choose_images():
         If this is the first image, it also returns "No movement detected".
     """
 
-    images_amount = 0
-
-    # Loop through files in the image directory
-    for path in os.listdir('/home/avraham/3d_print_error_detector/Image-files'):
-        if os.path.isfile(os.path.join('/home/avraham/3d_print_error_detector/Image-files', path)):
-            images_amount += 1
-
+    # REPLACE "USER" WITH YOUR USERNAME
     # Check if there are at least two images
-    if images_amount > 1:
+    if len(os.listdir('/home/USER/3d_print_error_detector/Image-files/*.jpg')) > 1:
         # Sort image paths by creation time (newest first)
-        image_paths = sorted(glob.glob('/home/avraham/3d_print_error_detector/Image-files/*.jpg'), key=os.path.getctime, reverse=True)
+        image_paths = sorted(glob.glob('/home/USER/3d_print_error_detector/Image-files/*.jpg'), key=os.path.getctime, reverse=True)
 
         # Load the two most recent images
         image1 = cv2.imread(image_paths[0])
