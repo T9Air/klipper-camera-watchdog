@@ -3,9 +3,6 @@ import os
 import sys
 import glob
 
-# Get how many pixels should be changed to cancel the print. From 0-1. The higher the number, the more pixels needed to cancel the print.
-threshold = sys.argv[0]
-
 # Image detection function
 
 def detect_movement_background_subtraction(image1, image2):
@@ -37,6 +34,8 @@ def detect_movement_background_subtraction(image1, image2):
     # Count num. of changed pixels
     changed_pixels = cv2.countNonZero(fg_mask)
 
+# CHANGE THRESHOLD TO WHATEVER VALUE YOU WANT. LOWER = MORE LIKELY TO CANCEL THE PRINT. FROM 0-1.
+    
     # Check if movement is detected based on a threshold of changed pixels
     if (changed_pixels / total_pixels) > threshold:
         return "Movement detected"
