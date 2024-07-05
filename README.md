@@ -10,7 +10,7 @@ Required modules:
  ```
 cd ~/
 git clone https://github.com/T9Air/klipper-camera-watchdog.git
-cd ~/klipper-env/bin
+cd ~/klippy-env/bin
 ./python3 -m pip install opencv-python
 cd ~/klipper-camera-watchdog
 mkdir Images-files
