@@ -57,7 +57,7 @@ def choose_images():
     # Check if there are at least two images
     if len(os.listdir('/home/USER/klipper-camera-watchdog/Image-files/')) > 1:
         # Sort image paths by creation time (newest first)
-        image_paths = sorted(glob.glob('/home/USER/klipper-camera-watchdog/Image-files/*.jpg'), key=os.path.getctime, reverse=True)
+        image_paths = sorted(glob.glob('/home/USER/klipper-camera-watchdog/Image-files/*'), key=os.path.getctime, reverse=True)
 
         # Load the two most recent images
         image1 = cv2.imread(image_paths[0])
