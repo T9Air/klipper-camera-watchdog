@@ -20,3 +20,5 @@ git clone https://github.com/T9Air/klipper-camera-watchdog.git
 8. In all of the files (check_image.cfg, compare_images.py, and config.yaml) you will need to change the directory paths to your user
 
 >WARNING: In the Python script, the threshold after which to cancel the print has not been calibrated and will need to be changed.
+
+Thank you to @droans for the extended_macros repo, and the all the help you gave when I had trouble setting it up.
