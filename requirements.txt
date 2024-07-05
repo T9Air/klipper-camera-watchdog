@@ -1,0 +1,4 @@
+# Python version
+python>=3.8
+
+opencv-python>=4.8

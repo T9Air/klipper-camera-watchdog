@@ -10,6 +10,10 @@ Required modules:
  ```
 cd ~/
 git clone https://github.com/T9Air/klipper-camera-watchdog.git
+cd ~/klipper-env/bin
+pip install -r requirements.txt
+cd ~/klipper-camera-watchdog
+mkdir Images-files
 ```
 2. Install @droans extended macros repo using the instructions over there: https://github.com/droans/klipper_extras
 3. Install cv2: go to /home/$USER/klippy-env/bin, and run ./python3 -m pip install opencv-python
