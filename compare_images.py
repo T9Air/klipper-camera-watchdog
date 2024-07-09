@@ -53,11 +53,10 @@ def choose_images():
         If this is the first image, it also returns "No movement detected".
     """
 
-    # REPLACE "USER" WITH YOUR USERNAME
     # Check if there are at least two images
-    if len(os.listdir('/home/USER/klipper-camera-watchdog/Image-files/')) > 1:
+    if len(os.listdir('~/klipper-camera-watchdog/Image-files/')) > 1:
         # Sort image paths by creation time (newest first)
-        image_paths = sorted(glob.glob('/home/USER/klipper-camera-watchdog/Image-files/*'), key=os.path.getctime, reverse=True)
+        image_paths = sorted(glob.glob('~/klipper-camera-watchdog/Image-files/*'), key=os.path.getctime, reverse=True)
 
         # Load the two most recent images
         image1 = cv2.imread(image_paths[0])
