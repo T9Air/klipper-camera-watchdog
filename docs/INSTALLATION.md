@@ -7,10 +7,8 @@ Required modules:
  ```
 cd ~/
 git clone https://github.com/T9Air/klipper-camera-watchdog.git
-cd ~/klippy-env/bin
-./python3 -m pip install opencv-python
 cd ~/klipper-camera-watchdog
-mkdir Image-files
+bash install.sh
 ```
 2. Install @droans extended macros repo using the instructions over there: https://github.com/droans/klipper_extras
 3. Istall timelapse for your printer: https://github.com/mainsail-crew/moonraker-timelapse
