@@ -27,4 +27,4 @@ So I started working and chose to use Python as the language that will be run to
 After creating the macro to move the printer to a specified location to take the timelapse frame, I ran into another problem. How would I run the Python script from the macro, and then cancel the print if movement is detected? First I tried running the Python script from a shell script (I forget what repository I used to get the ability to run a shell script from a macro), but I could not figure out how to pass back to the macro whether to cancel the print or not.
 
 # Thank you's
-Thank you to @droans for the [extended_macros](https://github.com/droans/klipper_extras) repo, and the all the help you gave when I had trouble setting it up.
+Thank you to [droans](https://github.com/droans) for the [extended_macros](https://github.com/droans/klipper_extras) repo, and the all the help you gave when I had trouble setting it up.
