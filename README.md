@@ -2,6 +2,9 @@
 3d print error detector that catches errors before normal AI spaghetti detectors.
 > Note: The background on how I decided to start this project is at the bottom of the page since it is a few paragraphs long, and I do not want to bore people who just want to get to all the important stuff.
 
+I would like to thank [ozf](https://github.com/ozf) for programming the base AI for calculating the threshold value after which to cancel the print. You can find it [here](https://github.com/T9Air/KCW_Threshold_Predictor). 
+> Note: Since there is very little data in the training set, it will likely not be very accurate. All data will be appreciated. I will write over there how to add data to the training set.
+
 # Installation and setup
 Go to https://github.com/T9Air/klipper-camera-watchdog/blob/main/docs/INSTALLATION.md
 
@@ -33,3 +36,5 @@ And that is basically why I decide to start this project, and how I set the main
 
 # Thank you's
 Thank you to [droans](https://github.com/droans) for the [extended_macros](https://github.com/droans/klipper_extras) repo, and all the help you gave when I had trouble setting it up.
+
+A big thank you to [ozf](https://github.com/ozf) for programming the base AI for calculating the threshold!
